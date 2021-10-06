@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     Rigidbody2D rb;
     
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
