@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1724101491415763388}
   - component: {fileID: 1724101491415763391}
   - component: {fileID: 1724101491415763390}
-  - component: {fileID: 1666507368255970061}
+  - component: {fileID: 6146551620972736094}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -148,7 +148,7 @@ MonoBehaviour:
   speed: 3
   vertical: 0
   changeTime: 3
---- !u!95 &1666507368255970061
+--- !u!95 &6146551620972736094
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
