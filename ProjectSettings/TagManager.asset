@@ -12,11 +12,11 @@ TagManager:
   - Water
   - UI
   - Confiner
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Character
+  - Projectile
+  - Enemy
+  - Obstaculo
+  - Coleccionable
   - 
   - 
   - 
