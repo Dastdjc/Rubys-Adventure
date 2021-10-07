@@ -30,7 +30,13 @@ public class RubyController : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.C))
+        {
+            Launch();
+        }
+    }
     void FixedUpdate()
     {
         float horizontal = Input.GetAxis("Horizontal");
@@ -61,10 +67,7 @@ public class RubyController : MonoBehaviour
                 isInvincible = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Launch();
-        }
+        
     }
 
     public void ChangeHealth(int amount)
@@ -79,8 +82,8 @@ public class RubyController : MonoBehaviour
         }
         
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        
-        Debug.Log(currentHealth + "/" + maxHealth);
+
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
     void Launch()
