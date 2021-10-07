@@ -11,6 +11,14 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+        if (transform.position.magnitude > 1000.0f)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void Launch(Vector2 direction, float force)
     {
         rb.AddForce(direction * force);
@@ -18,8 +26,12 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        //we also add a debug log to know what the projectile touch
-        Debug.Log("Projectile Collision with " + other.gameObject);
+        enemyController e = other.collider.GetComponent<enemyController>();
+        if (e != null)
+        {
+            e.Fix();
+        }
+
         Destroy(gameObject);
     }
 }
