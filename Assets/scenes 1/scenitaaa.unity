@@ -6595,6 +6595,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot
       objectReference: {fileID: 0}
+    - target: {fileID: 1764351022728055368, guid: c08dc17e8d7ac3c44bb09b0a65a50c13, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764351022728055368, guid: c08dc17e8d7ac3c44bb09b0a65a50c13, type: 3}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c08dc17e8d7ac3c44bb09b0a65a50c13, type: 3}
 --- !u!1 &707198430 stripped
