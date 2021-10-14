@@ -8,7 +8,8 @@ public class RubyController : MonoBehaviour
     
     public int maxHealth = 5;
     public float timeInvincible = 2.0f;
-    
+    public AudioSource audioSource;
+
     public int health {  get { return currentHealth; }}
     int currentHealth;
     bool isInvincible;
@@ -26,9 +27,16 @@ public class RubyController : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         currentHealth = maxHealth;
     }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
+
 
     void Update()
     {
